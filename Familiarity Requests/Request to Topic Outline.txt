@@ -1,0 +1,26 @@
+REQUEST #1 (Week Four):
+
+- MVC
+- Use Case Diagrams
+- Use Case Documents
+- Sequence Diagrams
+- Java Collections
+
+REQUEST #2 (Week Six):
+
+- Threads, Executors, and Runnables
+- Android HTTPUrlConnection
+- Servlets
+
+Request #3 (Week Eight):
+
+- Application Controller Pattern
+- JUnit Tests
+- System Level Tests
+
+Request #4 (Week Ten):
+
+- Hibernate
+- QCJSON and JSON
+- State Diagrams
+

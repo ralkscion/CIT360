@@ -1,0 +1,21 @@
+List Interface:
+- set()
+- sort()
+
+Set Interface:
+- Can't add duplicate elements. If you try, it will only add it once.
+
+Queue Interface:
+- Has a few unique methods of insertion, removal, and inspection (offer, poll, peek).
+- offer() returns "false" if it fails to insert an element.
+- poll() attempts to remove the head (first element) of the queue. Returns null if ran on an empty queue, while remove() returns false.
+- peek() returns but does not remove the head (first element) of the queue.
+- Elements are inserted in a FIFO (first in first out) order, starting at the tail.
+
+Map Interface:
+- put() method to add elements.
+- Has two items per element (key & value)
+https://docs.oracle.com/javase/7/docs/api/java/util/Map.html
+
+Tree (Implementation, not an Interface):
+- Inserts elements in ascending key order regardless of the order in which you attempt to insert them.
