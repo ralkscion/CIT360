@@ -1,7 +1,33 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<!-- <!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 
+	2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd" > -->
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+	<display-name>Welcome to Application Controller</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>servlets.ServBase</servlet-name>
+		<servlet-class>servlets.ServBase</servlet-class>
+	</servlet>
+
+	<servlet>
+		<description>
+		</description>
+		<display-name>ClientAppController</display-name>
+		<servlet-name>ClientServlet</servlet-name>
+		<servlet-class>acp.ClientServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>servlets.ServBase</servlet-name>
+		<url-pattern>/welcome</url-pattern>
+
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ClientServlet</servlet-name>
+		<url-pattern>/ClientServlet</url-pattern>
+	</servlet-mapping>
+
 </web-app>

@@ -1,0 +1,81 @@
+<html>
+<%@page import="java.io.IOException"%>
+<%@page import="java.io.PrintWriter"%>
+<%@page import="java.util.Arrays"%>
+<%@page import="threads.PlaySong"%>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="index.css">
+<title>JSP Demo</title>
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker"
+	rel="stylesheet">
+</head>
+<body bgcolor="black">
+	<video autoplay muted loop id="bgvideo">
+		<source src="http://music.faintdev.net/bluewave.mp4" type="video/mp4">
+	</video>
+	<br>
+	<center>
+		<h3>Choose a song:</h3>
+		<form method="get">
+			<input type="checkbox" name="artist" value="RZX">RZX <input
+				type="checkbox" name="artist" value="SOUL">SOUL <input
+				type="checkbox" name="artist" value="CHRISTMAS">CHRISTMAS <input
+				type="checkbox" name="artist" value="STOP">STOP MUSIC <input
+				type="submit" value="Query">
+		</form>
+		<%
+			PlaySong player = new PlaySong();
+
+			// getServletContext().setAttribute("player", player);
+			String[] artist = request.getParameterValues("artist");
+			if (artist != null) {
+		%>
+
+		<div class="container">
+			You have selected:
+			<%
+			for (int i = 0; i < artist.length; ++i) {
+					out.println(" " + artist[i]);
+				}
+
+				String value = Arrays.toString(artist);
+
+				// Trim [ and ] characters before and after string.
+				value = value.substring(1);
+				value = value.substring(0, value.length() - 1);
+
+				switch (value) {
+				case "RZX":
+					System.out.println("RZX case called.");
+					player.stopSongs();
+					player.setInstrumentals("http://music.faintdev.net/rzxbass.wav");
+					player.setVocals("http://music.faintdev.net/starlight.wav");
+					player.startSongs();
+					break;
+				case "SOUL":
+					System.out.println("SOUL case called.");
+					player.setInstrumentals("http://music.faintdev.net/soul.wav");
+					player.setVocals("http://music.faintdev.net/starlight.wav");
+					player.startSongs();
+					break;
+				case "CHRISTMAS":
+					System.out.println("CHRISTMAS case called.");
+					player.stopSongs();
+					player.setInstrumentals("http://music.faintdev.net/christmas.wav");
+					player.setVocals("http://music.faintdev.net/starlight.wav");
+					player.startSongs();
+					break;
+				case "STOP":
+					System.out.println("STOP case called.");
+					player.stopSongs();
+				}
+			}
+		%>
+
+		</div>
+		<a href="<%request.getRequestURI();%>">Back</a>
+	</center>
+
+</body>
+</html>
