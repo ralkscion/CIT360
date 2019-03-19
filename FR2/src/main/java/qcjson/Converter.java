@@ -30,7 +30,7 @@ public class Converter {
 		// Configure Java object.
 		prancer.setName("Prancer");
 		prancer.setFurColor("Salt and Pepper");
-		prancer.setAge(16);
+		prancer.setAge(15);
 		prancer.setWeight(20);
 
 		// Convert Java object to JSON string.

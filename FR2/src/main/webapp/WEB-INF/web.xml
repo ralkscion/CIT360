@@ -7,11 +7,11 @@
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 
+	<!-- Servlets -->
 	<servlet>
 		<servlet-name>servlets.ServBase</servlet-name>
 		<servlet-class>servlets.ServBase</servlet-class>
 	</servlet>
-
 	<servlet>
 		<description>
 		</description>
@@ -19,15 +19,26 @@
 		<servlet-name>ClientServlet</servlet-name>
 		<servlet-class>acp.ClientServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>GetDataServlet</display-name>
+		<servlet-name>GetDataServlet</servlet-name>
+		<servlet-class>hibernate.utils.GetDataServlet</servlet-class>
+	</servlet>
 
+	<!-- Servlet Mappings -->
 	<servlet-mapping>
 		<servlet-name>servlets.ServBase</servlet-name>
 		<url-pattern>/welcome</url-pattern>
-
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>ClientServlet</servlet-name>
 		<url-pattern>/ClientServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetDataServlet</servlet-name>
+		<url-pattern>/GetDataServlet</url-pattern>
 	</servlet-mapping>
 
 </web-app>

@@ -8,8 +8,8 @@
 </head>
 <body>
 	<form action="ClientServlet" method="post">
-		Name:<input type="text" name="nextPage" /><br /> <input type="submit"
-			value="Submit" />
+		Name:<input type="text" name="nextPage" /><br /> <input
+			type="submit" value="Submit" />
 	</form>
 </body>
 </html>
