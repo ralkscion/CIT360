@@ -9,7 +9,7 @@ package threadsrevisted;
  * 
  * If this program is working as intended, the console will display both even and odd numbers, counting up to 100 for each.
  * It should look like a seamless counting effort from 1-100, with no numbers skipped. Granted, they may sometimes display in an imperfect order.
- * Author: Jeremy James Alkire
+ * Author: Jeremy Alkire
  */
 import java.util.concurrent.Executor;
 

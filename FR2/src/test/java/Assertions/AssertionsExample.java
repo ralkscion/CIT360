@@ -4,7 +4,7 @@ package Assertions;
  * This program tests various assert methods in JUnit, including assertEquals(), assertTrue(), assertNotSame() and assertNotNull()
  * When this test is run, it should only result in one failure, as the comparison between strings hashOne and hashTwo are not equal, on line 24.
  * All other assert methods should pass the test.
- * Author: Jeremy James Alkire
+ * Author: Jeremy Alkire
  */
 
 import static org.junit.Assert.assertEquals;
